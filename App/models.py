@@ -96,6 +96,7 @@ class Products(models.Model):
     description = models.TextField(null=True, blank=True, default='This is The decription of the product')
     user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
     category = models.ForeignKey(Category, on_delete=models.SET_NULL, null=True)
+    vendor = models.ForeignKey(Vendor, on_delete=models.SET_NULL, null=True)
 
     price = models.DecimalField(max_digits=999999999999, decimal_places=2, default='1.99')
     old_price = models.DecimalField(max_digits=999999999999, decimal_places=2, default='2.99')
